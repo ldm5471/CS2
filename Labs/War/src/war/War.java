@@ -20,7 +20,7 @@ public class War {
      * @param cardsPerPlayer the number of cards for a single player
      */
     public War(int cardsPerPlayer) {
-        // TODO
+        Pile inital = new Pile();
     }
 
     /** Play the full game. */

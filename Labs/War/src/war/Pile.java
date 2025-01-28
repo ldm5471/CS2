@@ -13,10 +13,12 @@ public class Pile {
     private static Random rng;
 
     public Pile(String name) {
+        this.name = name;
+        cards = new ArrayList<Card>();
 
     }
     public void addCard(Card card) {
-
+        cards.add(card);
     }
     public void clear() {
 
