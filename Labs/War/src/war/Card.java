@@ -9,7 +9,7 @@ package war;
 public class Card {
     private Rank rank;
     private Suit suit;
-    private boolean faceUp;
+    boolean faceUp;
     /**
      * Create the card with the rank and suit.  The card is not face up to begin with.
      *

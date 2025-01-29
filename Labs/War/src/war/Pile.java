@@ -2,6 +2,7 @@ package war;
 
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.Collections;
 
 /**
  * Used to represent each players pile of cards to play
@@ -21,25 +22,43 @@ public class Pile {
         cards.add(card);
     }
     public void clear() {
-
+        cards.clear();
     }
     public Card drawCard(boolean faceUp){
-       return null;
+        Card draw = cards.remove(0);
+        if (draw.isFaceUp() == true){
+            shuffle();
+        }
+        if (faceUp == true){
+            draw.setFaceUp();
+        }else {
+            draw.setFaceDown();
+        }
+        return draw;
     }
     public ArrayList<Card> getCards() {
         return cards;
     }
     public boolean hasCard(){
-        return false;
+        return !cards.isEmpty();
     }
     public static void setSeed(long seed) {
+        rng = new Random(seed);
 
     }
     public void shuffle() {
-
+        System.out.println("Shuffling " + this.name + " pile");
+        Collections.shuffle(cards, rng);
+        for (Card c : cards){
+            c.setFaceDown();
+        }
     }
     @Override
     public String toString() {
-        return name;
+        String result = this.name + " pile: ";
+        for (Card c : cards){
+            result = result + c + " ";
+        }
+        return result;
     }
 }

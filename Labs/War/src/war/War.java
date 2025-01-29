@@ -7,7 +7,7 @@ package war;
  * <br>
  *
  * @author RIT CS
- * @author YOUR NAME HERE
+ * @author Luke Maeurer
  */
 
 public class War {
@@ -20,7 +20,13 @@ public class War {
      * @param cardsPerPlayer the number of cards for a single player
      */
     public War(int cardsPerPlayer) {
-        Pile inital = new Pile();
+        Pile inital = new Pile("inital");
+        for (Rank rank : Rank.values()) {
+            for (Suit suit : Suit.values()) {
+                inital.addCard(new Card(rank, suit));
+            }
+        }
+        inital.shuffle();
     }
 
     /** Play the full game. */
