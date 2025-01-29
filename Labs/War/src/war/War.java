@@ -27,11 +27,27 @@ public class War {
             }
         }
         inital.shuffle();
+        System.out.println(inital);
+        Player p1 = new Player(1);
+        Player p2 = new Player(2);
+        for (int i = 0; i < cardsPerPlayer; i++){
+            for (int j = 0; i < 2; i ++){
+                if (j == 0){
+                    p1.addCard(inital.drawCard(false));
+                }else{
+                    p2.addCard(inital.drawCard(false));
+                }
+            }
+
+        }
+    }
+    private void playRound(){
+
     }
 
     /** Play the full game. */
     public void playGame() {
-        // TODO
+        System.out.println("War");
     }
 
     /**
