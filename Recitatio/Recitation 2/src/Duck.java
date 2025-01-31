@@ -10,6 +10,7 @@ public class Duck implements Animal,Flyer,Swimmer{
         happiness = 0;
     }
     public void pet(int seconds){
+        this.happiness += seconds*wingSpan;
 
     }
     public int getHappiness(){
@@ -21,16 +22,15 @@ public class Duck implements Animal,Flyer,Swimmer{
     }
     @Override
     public String speak(){
-        String sound = "quack!, quack!"
-        return this.toString() + "says " + sound;
+        return this.toString() + " says \"quack!, quack!\"";
     }
     @Override
     public double dive(int minutes){
-        return 0;
+        return minutes*SWIN_SPEED_MS;
     }
     @Override
     public double fly(int seconds){
-        return 0;
+        return seconds*FLY_SPEED_MS*wingSpan;
     }
     @Override
     public String toString() {
