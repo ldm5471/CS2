@@ -97,7 +97,7 @@ import java.util.ArrayList;
  * 	Penguin{beakLength=20, fishEaten=800}
  * 	Duck{wingSpan=10.0, happiness=1200}
  *
- * @author RIT CS
+ * @author Luke Maeurer
  */
 public class AnimalFarmSol {
     /** the collection of animals */
