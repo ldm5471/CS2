@@ -4,6 +4,7 @@ package inheritance;
  * A basic monster with a name and hit points.
  *
  * @author CS RIT
+ * @author Luke Maeurer
  */
 public abstract class Monster {
 
@@ -14,6 +15,7 @@ public abstract class Monster {
         this.name = name;
         this.hitPoints = hitPoints;
     }
+    public abstract void attack(Monster other);
 
     public String getName() {
         return name;

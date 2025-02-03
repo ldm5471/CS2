@@ -35,6 +35,11 @@ public class Phoenix extends Monster implements Flyer {
             updateHitPoints(restore);
         }
     }
+    @Override
+    public void attack(Monster other){
+        System.out.println(getName() + " claws " + other.getName() + " KAW KAW!!!!");
+        other.takeDamage(15);
+    }
 
     @Override
     public String toString() {
