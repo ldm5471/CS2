@@ -5,7 +5,7 @@ package inheritance;
  *
  * @author CS RIT
  */
-public class Monster {
+public abstract class Monster {
 
     private final String name;
     private int hitPoints;
