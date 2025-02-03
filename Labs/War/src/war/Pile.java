@@ -25,10 +25,11 @@ public class Pile {
         cards.clear();
     }
     public Card drawCard(boolean faceUp){
-        Card draw = cards.remove(0);
-        if (draw.isFaceUp() == true){
+        if (this.cards.get(0).isFaceUp() == true){
             shuffle();
+            System.out.println(this.toString());
         }
+        Card draw = this.cards.remove(0);
         if (faceUp == true){
             draw.setFaceUp();
         }else {

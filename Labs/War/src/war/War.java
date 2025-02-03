@@ -13,6 +13,9 @@ package war;
 public class War {
     /** The maximum number of cards a single player can have */
     public final static int MAX_CARDS_PER_PLAYER = 26;
+    private final Player p1;
+    private final Player p2;
+    private int round;
 
     /**
      * Initialize the game.
@@ -20,7 +23,7 @@ public class War {
      * @param cardsPerPlayer the number of cards for a single player
      */
     public War(int cardsPerPlayer) {
-        Pile inital = new Pile("inital");
+        Pile inital = new Pile("Inital");
         for (Rank rank : Rank.values()) {
             for (Suit suit : Suit.values()) {
                 inital.addCard(new Card(rank, suit));
@@ -28,10 +31,11 @@ public class War {
         }
         inital.shuffle();
         System.out.println(inital);
-        Player p1 = new Player(1);
-        Player p2 = new Player(2);
+        p1 = new Player(1);
+        p2 = new Player(2);
+        round = 1;
         for (int i = 0; i < cardsPerPlayer; i++){
-            for (int j = 0; i < 2; i ++){
+            for (int j = 0; j < 2; j ++){
                 if (j == 0){
                     p1.addCard(inital.drawCard(false));
                 }else{
@@ -41,13 +45,53 @@ public class War {
 
         }
     }
-    private void playRound(){
+    private void playRound(Pile trick){
+        round++;
+        System.out.println(p1);
+        System.out.println(p2);
+        Card p1_card = p1.drawCard();
+        Card p2_card = p2.drawCard();
+        System.out.println("P1 card: " + p1_card);
+        System.out.println("P2 card: " + p2_card);
+        trick.addCard(p1_card);
+        trick.addCard(p2_card);
+        if (p1_card.beats(p2_card)){
+            System.out.println("P1 wins round gets " + trick);
+            p1.addCards(trick);
+            trick.clear();
+        }else if (p2_card.beats(p1_card)){
+            System.out.println("P2 wins round gets " + trick);
+            p2.addCards(trick);
+            trick.clear();
+        }else if (p1_card.equals(p2_card)){
+            System.out.println("WAR!");
+            playRound(trick);
+        }
+
 
     }
 
     /** Play the full game. */
     public void playGame() {
-        System.out.println("War");
+        Pile trick = new Pile("Trick");
+        while (p1.isWinner() == false && p2.isWinner() == false) {
+            if (p2.hasCard() == false) {
+                p1.setWinner();
+                playGame();
+            } else if (p1.hasCard() == false) {
+                p2.setWinner();
+                playGame();
+            } else {
+                System.out.println("ROUND " + String.valueOf(round));
+                playRound(trick);
+            }
+        }
+        if (p1.isWinner()) {
+            System.out.println("P1 WINS!");
+        } else if (p2.isWinner()) {
+            System.out.println("P2 WINS!");
+        }
+
     }
 
     /**
