@@ -7,8 +7,8 @@ package inheritance;
  */
 public class Monster {
 
-    public final String name;
-    public int hitPoints;
+    private final String name;
+    private int hitPoints;
 
     public Monster(String name, int hitPoints) {
         this.name = name;
@@ -18,11 +18,21 @@ public class Monster {
     public String getName() {
         return name;
     }
+    public int getHitPoints() {
+        return hitPoints;
+    }
+    public void updateHitPoints(int hitPoints) {
+        this.hitPoints += hitPoints;
+        if (this.hitPoints < 0){
+            this.hitPoints = 0;
+        }
+    }
+
     public void takeDamage(int amount){
         System.out.println(getName() + " takes " + amount + " damage");
-        hitPoints -= amount;
+        updateHitPoints(-amount);
         if (hitPoints <= 0){
-            System.out.println(getName() + " fainted")
+            System.out.println(getName() + " fainted!!");
         }
     }
 

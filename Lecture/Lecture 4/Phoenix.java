@@ -13,6 +13,7 @@ public class Phoenix extends Monster implements Flyer {
     private int distance;
 
     public Phoenix(String name, int hitPoints) {
+        super(name, hitPoints);
         this.distance = 0;
     }
 
@@ -26,8 +27,18 @@ public class Phoenix extends Monster implements Flyer {
     }
 
     @Override
+    public void takeDamage(int amount){
+        super.takeDamage(amount);
+        if (getHitPoints() > 0){
+            int restore = amount/2;
+            System.out.println(getName() + " regens " + restore + " points");
+            updateHitPoints(restore);
+        }
+    }
+
+    @Override
     public String toString() {
-        return "Phoenix{distance=" + distance + "}";
+        return super.toString() + ", Phoenix{distance=" + distance + "}";
     }
 
 }
