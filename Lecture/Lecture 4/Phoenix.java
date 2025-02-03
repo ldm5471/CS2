@@ -6,7 +6,7 @@ package inheritance;
  *
  * @author CS RIT
  */
-public class Phoenix {
+public class Phoenix extends Monster implements Flyer {
     /**
      * how far has this phoenix flown?
      */
@@ -21,7 +21,13 @@ public class Phoenix {
     }
 
     @Override
+    public void fly(int distance) {
+        this.distance += distance;
+    }
+
+    @Override
     public String toString() {
         return "Phoenix{distance=" + distance + "}";
     }
+
 }
