@@ -9,7 +9,16 @@ package inheritance;
 public class TestMonsters {
 
     public static void main(String[] args) {
-        // TODO The monster fight will happen here
+        Monster mike = new Monster("Mike", 20);
+        Monster sully = new Monster("Sully", 50);
+        System.out.println(sully);
+        System.out.println(mike);
+        mike.takeDamage(10);
+        sully.takeDamage(25);
+        System.out.println(mike);
+        System.out.println(sully);
+        mike.takeDamage(15);
+        System.out.println(mike);
     }
 }
 

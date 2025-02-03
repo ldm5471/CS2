@@ -18,6 +18,13 @@ public class Monster {
     public String getName() {
         return name;
     }
+    public void takeDamage(int amount){
+        System.out.println(getName() + " takes " + amount + " damage");
+        hitPoints -= amount;
+        if (hitPoints <= 0){
+            System.out.println(getName() + " fainted")
+        }
+    }
 
     @Override
     public boolean equals(Object o) {
