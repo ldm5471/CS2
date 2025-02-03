@@ -17,6 +17,11 @@ public class TestMonsters {
         System.out.println(mike);
         System.out.println(fawkes);
 
+        // show how different objects work
+        Monster m = fawkes;
+        m.takeDamage(15);
+        fawkes.fly(30);
+
         // Monsters Take Damage
         mike.takeDamage(10);
         sully.takeDamage(25);
