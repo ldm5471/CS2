@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="450fdecd-2420-4311-8b3a-da7fcdf8313c" name="Changes" comment="Extend monster and implement flyer">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lecture/Lecture 4/Ogre.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lecture/Lecture 4/Ogre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lecture/Lecture 4/TestMonsters.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lecture/Lecture 4/TestMonsters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lecture/Lecture 4/out/production/Lecture 4/inheritance/Monster.class" beforeDir="false" afterPath="$PROJECT_DIR$/Lecture/Lecture 4/out/production/Lecture 4/inheritance/Monster.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lecture/Lecture 4/out/production/Lecture 4/inheritance/Ogre.class" beforeDir="false" afterPath="$PROJECT_DIR$/Lecture/Lecture 4/out/production/Lecture 4/inheritance/Ogre.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lecture/Lecture 4/out/production/Lecture 4/inheritance/Phoenix.class" beforeDir="false" afterPath="$PROJECT_DIR$/Lecture/Lecture 4/out/production/Lecture 4/inheritance/Phoenix.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lecture/Lecture 4/out/production/Lecture 4/inheritance/TestMonsters.class" beforeDir="false" afterPath="$PROJECT_DIR$/Lecture/Lecture 4/out/production/Lecture 4/inheritance/TestMonsters.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,18 +20,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "ldm5471"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ldm5471&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/ldm5471/CS2.git",
-    "accountId": "56452744-3141-47bb-8dbf-c71a76e51620"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ldm5471/CS2.git&quot;,
+    &quot;accountId&quot;: &quot;56452744-3141-47bb-8dbf-c71a76e51620&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -42,7 +47,7 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/userl/Documents/CS2/CS2/Lecture/Lecture 4",
+    "last_opened_file_path": "C:/Users/userl/Documents/CS2/CS2",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -79,6 +84,7 @@
       <workItem from="1738103671182" duration="652000" />
       <workItem from="1738104367637" duration="49000" />
       <workItem from="1738603498564" duration="36000" />
+      <workItem from="1738951782720" duration="53000" />
     </task>
     <task id="LOCAL-00001" summary="Add take damage and create mike and sully">
       <option name="closed" value="true" />
